@@ -37,8 +37,8 @@ const myFirstArrowFunction = (numb1, numb2) => {
     let total2 = numb1 + numb2
     return total2
 }
-const result = myFirstArrowFunction(20, 20);
-console.log(result);
+const result = myFirstArrowFunction(20, 20)
+console.log(result);//Foi necessário terminar a linha com ";" para eliminar erro que estava ocorrendo ao executar a função anônima abaixo.
 
 //Função Anônima: é uma função que é executada assim que é declarada, sendo invocada de imediato.
 (function () {
@@ -48,3 +48,41 @@ console.log(result);
 setTimeout (function () {
     console.log('Timeout de 3s.')
 },3000)
+
+//Parte 1
+
+// let assunto
+// function criarAssunto (assunto) {
+//     return assunto
+// }
+
+// console.log(criarAssunto());
+
+//Parte 2
+
+// let assunto = 'Estudar'
+// function criarAssunto (assunto) {
+//     return assunto
+// }
+// console.log(assunto) // resposta => 'Estudar'
+// console.log(criarAssunto(assunto)); // resposta => 'Estudar'
+
+//Parte 3
+
+// let assunto = 'Estudar'
+// function criarAssunto (assunto) {
+//     assunto = 'Escutar música'
+//     return assunto
+// }
+// console.log(assunto) // resposta => 'Estudar'
+// console.log(criarAssunto(assunto)); // resposta => 'Escutar música'
+
+//Parte 4
+
+let assunto = 'Estudar'
+function criarAssunto () {
+    assunto = 'Escutar música'
+    return assunto
+}
+console.log(assunto) // resposta => 'Estudar'
+console.log(criarAssunto(assunto)); // resposta => 'Escutar música'
