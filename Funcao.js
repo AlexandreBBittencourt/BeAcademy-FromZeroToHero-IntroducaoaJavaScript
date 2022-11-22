@@ -37,5 +37,14 @@ const myFirstArrowFunction = (numb1, numb2) => {
     let total2 = numb1 + numb2
     return total2
 }
-const result = myFirstArrowFunction(20, 20)
-console.log(result)
+const result = myFirstArrowFunction(20, 20);
+console.log(result);
+
+//Função Anônima: é uma função que é executada assim que é declarada, sendo invocada de imediato.
+(function () {
+    console.log('Execução imediata.')
+})()
+
+setTimeout (function () {
+    console.log('Timeout de 3s.')
+},3000)
