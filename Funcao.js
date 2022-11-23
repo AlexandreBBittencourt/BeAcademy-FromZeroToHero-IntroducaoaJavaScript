@@ -86,3 +86,73 @@ function criarAssunto () {
 }
 console.log(assunto) // resposta => 'Estudar'
 console.log(criarAssunto(assunto)); // resposta => 'Escutar música'
+
+//Hoisting
+digaMinhaIdade ()
+function digaMinhaIdade () {
+    return console.log(30)
+}
+
+//Callback Function => chamar uma função dentro de outra
+
+function minhaFuncao (callback) {
+    console.log('Início da minha função.')
+    callback(15, 15)
+    console.log('Final da minha função.')
+}
+minhaFuncao ((num3, num4) => {
+    return console.log(num3 + num4)
+})
+
+//Função Construtora
+//Para declarar uma função construtora é necessário que a primeira letra de seu nome seja maiúscula, ou o JavaScript não a entenderá como construtora.
+
+function Sum () {
+    this.num5, //Para declarar variáveis em uma função construtora usa-se "this"
+    this.num6,
+    this.calc = function (num5, num6) {
+        return total3 = num5 + num6
+    }
+}
+
+const math = new Sum () //Instanciando
+console.log(math.calc(32, 32))
+
+const math2 = new Sum ()
+console.log(math2.calc(50, 20))
+
+const math3 = new Sum ()
+const num7 = math3.num7 = 36
+const num8 = math3.num8 = 64
+console.log(math3.calc(num7, num8))
+
+const math4 = new Sum ()
+const number3 = math4.num7 = 30
+const number4 = math4.num8 = 10
+console.log(math4.calc(number3, number4))
+
+const math5 = new Sum ().calc (45, 45)
+console.log(math5)
+
+//Função Construtora parametrizada
+
+function Sum2 (num11, num12) {
+    this.num9 = num11,
+    this.num10 = num12,
+    this.calc2 = function (num9, num10) {
+        return total4 = num9 + num10
+    }
+}
+
+const math6 = new Sum2 ()
+console.log(math6.calc2(70, 85))
+
+//Função nativa do JavaScript
+const data = new Date ();
+console.log(data)
+
+const data2 = new Date ().getDay();//Dia da semana 1~7 = segunda~domingo
+console.log(data2)
+
+const data3 = new Date ().getDate();//Dia do mês
+console.log(data3)
